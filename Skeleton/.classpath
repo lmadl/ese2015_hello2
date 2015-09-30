@@ -6,22 +6,34 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+	<classpathentry exported="true" kind="con" path="org.eclipse.iam.jdt.core.mavenClasspathContainer">
 		<attributes>
-			<attribute name="optional" value="true"/>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
+	<classpathentry exported="true" kind="lib" path="/Volumes/Macintosh HD/Users/lucienmadl/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar">
+		<attributes>
+			<attribute name="org.eclipse.iam.jdt.core.classpath.container.artifactId" value="hibernate-jpa-2.0-api"/>
+			<attribute name="org.eclipse.iam.jdt.core.classpath.container.version" value="1.0.1.Final"/>
+			<attribute name="org.eclipse.iam.jdt.core.classpath.containertype" value="jar"/>
+			<attribute name="org.eclipse.iam.jdt.core.classpath.container.scope" value="compile"/>
+			<attribute name="org.eclipse.iam.jdt.core.classpath.container.groupId" value="org.hibernate.javax.persistence"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/Volumes/Macintosh HD/Users/lucienmadl/.m2/repository/org/springframework/data/spring-data-commons-core/1.4.0.RELEASE/spring-data-commons-core-1.4.0.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.iam.jdt.core.classpath.containertype" value="jar"/>
+			<attribute name="org.eclipse.iam.jdt.core.classpath.container.version" value="1.4.0.RELEASE"/>
+			<attribute name="org.eclipse.iam.jdt.core.classpath.container.scope" value="compile"/>
+			<attribute name="org.eclipse.iam.jdt.core.classpath.container.groupId" value="org.springframework.data"/>
+			<attribute name="org.eclipse.iam.jdt.core.classpath.container.artifactId" value="spring-data-commons-core"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

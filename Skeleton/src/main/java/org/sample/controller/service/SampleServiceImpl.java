@@ -1,10 +1,17 @@
 package org.sample.controller.service;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import org.sample.controller.exceptions.InvalidTeamException;
 import org.sample.controller.exceptions.InvalidUserException;
 import org.sample.controller.pojos.SignupForm;
+import org.sample.controller.pojos.TeamForm;
 import org.sample.model.Address;
+import org.sample.model.Team;
 import org.sample.model.User;
 import org.sample.model.dao.AddressDao;
+import org.sample.model.dao.TeamDao;
 import org.sample.model.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,6 +24,7 @@ public class SampleServiceImpl implements SampleService {
 
     @Autowired    UserDao userDao;
     @Autowired    AddressDao addDao;
+    @Autowired	  TeamDao teamDao;
     
     @Transactional
     public SignupForm saveFrom(SignupForm signupForm) throws InvalidUserException{
@@ -49,4 +57,37 @@ public class SampleServiceImpl implements SampleService {
         return signupForm;
 
     }
+
+    @Transactional
+	public TeamForm saveFrom(TeamForm teamForm) throws InvalidTeamException {
+    	String teamName = teamForm.getTeamName();
+
+        if(!StringUtils.isEmpty(teamName) && "ESE".equalsIgnoreCase(teamName)) {
+            throw new InvalidUserException("Sorry, ESE is not a valid team name");
+        }
+        Team team = new Team();
+        team.setTeamName(teamForm.getTeamName());
+        team.setDate(teamForm.getDateAsString());
+        
+        team = teamDao.save(team);
+        
+        teamForm.setId(team.getId());
+        
+		return teamForm;
+		
+	}
+
+	public User getUserById(long id) {
+		User user = userDao.findOne(id);
+		return user;
+	}
+
+	public ArrayList<Team> getTeamList() {
+		Iterator<Team> count = teamDao.findAll().iterator();
+		ArrayList<Team> listOfTeams = new ArrayList<Team>();
+		while(count.hasNext()){
+			listOfTeams.add(count.next());
+		}
+		return listOfTeams;
+	}
 }

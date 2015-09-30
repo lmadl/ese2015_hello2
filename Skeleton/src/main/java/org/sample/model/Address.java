@@ -9,7 +9,8 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Address {
-	  @Id
+		
+	@Id
 	    @GeneratedValue
 	    private Long id;
 
