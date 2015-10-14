@@ -9,6 +9,7 @@ public class SignupForm {
     private Long id;
     private String firstName;
     private String lastName;
+    private String team;
 
 
     @NotNull
@@ -47,4 +48,12 @@ public class SignupForm {
     public void setId(Long id) {
         this.id = id;
     }
+    
+    public String getTeam() {
+		return team;
+	}
+
+	public void setTeam(String team) {
+		this.team = team;
+	}
 }
