@@ -10,9 +10,9 @@
 <h1>Sign Up Here!</h1>
 
 
-<form:form method="post" modelAttribute="teamForm" action="createTeam" id="signupForm" cssClass="form-horizontal"  autocomplete="off">
+<form:form method="post" modelAttribute="teamForm" action="create" id="signupForm" cssClass="form-horizontal"  autocomplete="off">
     <fieldset>
-        <legend>Enter Your Team Information</legend>
+        <legend>Enter Your Information</legend>
 
         <c:set var="teamNameErrors"><form:errors path="teamName"/></c:set>
         <div class="control-group<c:if test="${not empty teamNameErrors}"> error</c:if>">
